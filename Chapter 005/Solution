@@ -1,0 +1,59 @@
+1. Use Big O Notation to describe the time complexity of an algorithm that
+takes 4N + 16 steps.
+
+Answer: The time complexity is O(N), because we ignore the constant steps.
+
+2. Use Big O Notation to describe the time complexity of an algorithm that
+takes 2N2.
+
+Answer: The time complexity is O(N²), because, again, we ignore the
+constants.
+
+3. Use Big O Notation to describe the time complexity of the following func-
+tion, which returns the sum of all numbers of an array after the numbers
+have been doubled:
+
+def double_then_sum(array)
+doubled_array = []
+array.each do |number|
+doubled_array << number *= 2
+end
+sum = 0
+doubled_array.each do |number|
+sum += number
+end
+return sum
+end
+
+Answer: The time complexity of this function is O(N) because even because
+there are two loops, each of them runs separately for each element of the array. The constant operations are ignored.
+
+4. Use Big O Notation to describe the time complexity of the following func-
+tion, which accepts an array of strings and prints each string in multiple
+cases:
+def multiple_cases(array)
+array.each do |string|
+puts string.upcase
+puts string.downcase
+puts string.capitalize
+end
+end
+
+Answer: The time complexity of this algorithm is O(N) because it runs for
+each element of the string array.
+
+5. The next function iterates over an array of numbers, and for each number
+whose index is even, it prints the sum of that number plus every number
+in the array. What is this function’s efficiency in terms of Big O Notation?
+def every_other(array)
+array.each_with_index do |number, index|
+if index.even?
+array.each do |other_number|
+puts number + other_number
+end
+end
+end
+end
+
+Answer: This algorithm has an efficiency of O(N²) because there are two
+nested loops, so N * N = N².
