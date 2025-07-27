@@ -1,5 +1,5 @@
 ﻿using Exercises;
 
-Chapter004 Chapter004 = new Chapter004();
+Chapter006 Chapter006 = new Chapter006();
 
-Console.WriteLine(Chapter004.GreatestNumber([7, 15, 22, 1, 6, 34, 2, 6]));
+Console.WriteLine(Chapter006.containsX("asfdX"));

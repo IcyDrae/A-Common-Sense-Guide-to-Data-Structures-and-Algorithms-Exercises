@@ -1,0 +1,36 @@
+1. Use Big O Notation to describe the efficiency of an algorithm that takes
+3N² + 2N + 1 steps.
+
+Answer: This algorithm has an efficiency of O(N²), because all lower powers
+and constants are ignored.
+
+2. Use Big O Notation to describe the efficiency of an algorithm that takes
+N + log N steps.
+
+Answer: This algorithm has an effieciency of O(N) because all lower powers
+are ignored. O(log n) is lower than O(N).
+
+3.The following function checks whether an array of numbers contains a
+pair of two numbers that add up to 10.
+function twoSum(array) {
+for (let i = 0; i < array.length; i++) {
+for (let j = 0; j < array.length; j++) {
+if (i !== j && array[i] + array[j] === 10) {
+return true;
+}
+}
+}
+return false;
+}
+What are the best-, average-, and worst-case scenarios? Then, express
+the worst-case scenario in terms of Big O Notation.
+
+Answer:
+Best case: a matching pair is found immediately, e.g array[0] and array[1].
+No further comparisons needed, this is O(1).
+
+Average case: a matching pair is found somewhere in the middle of the array.
+Roughly O(N² / 2) comparisons, but we write it as O(N²).
+
+Worst case: No pair adds up to 10, so the nested loop runs without early exit.
+Time complexity is O(N²).
