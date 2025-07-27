@@ -1,0 +1,31 @@
+1. Replace the question marks in the following table to describe how many steps
+occur for a given number of data elements across various types of Big O:
+N Elements  O(N)    O(log N)    O(N²)
+100        100      ?           ?
+2000       ?        ?           ?
+
+Answer:
+N Elements  O(N)    O(log N)    O(N²)
+100        100      6           10.000
+2000       2000     10          4.000.000
+
+2. If we have an O(N²) algorithm that processes an array and find that it
+takes 256 steps, what is the size of the array?
+
+Answer: 16 elements. The answer is found by finding the square root of 256.
+
+3. Use Big O Notation to describe the time complexity of the following func-
+tion. It finds the greatest product of any pair of two numbers within a
+given array:
+def greatestProduct(array):
+greatestProductSoFar = array[0] * array[1]
+for i, iVal in enumerate(array):
+for j, jVal in enumerate(array):
+if i != j and iVal * jVal > greatestProductSoFar:
+greatestProductSoFar = iVal * jVal
+return greatestProductSoFar
+
+Answer: The time complexity of this function is O(N²) because we have two
+loops which go through the whole array of size N. So the total number of
+comparisons is N * N.
+
