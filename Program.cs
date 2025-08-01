@@ -1,5 +1,5 @@
-﻿using Exercises;
+﻿using Chapter008;
 
-Chapter006 Chapter006 = new Chapter006();
+Solution4 Solution4 = new Solution4();
 
-Console.WriteLine(Chapter006.containsX("asfdX"));
+Console.WriteLine(Solution4.firstNonDuplicate("minimum"));
