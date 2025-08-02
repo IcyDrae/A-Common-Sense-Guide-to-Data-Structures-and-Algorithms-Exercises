@@ -1,0 +1,47 @@
+1. The following function prints every other number from a low number to a
+high number. For example, if low is 0 and high is 10, it would print:
+0
+2
+4
+6
+8
+10
+
+Identify the base case in the function:
+def print_every_other(low, high)
+return if low > high
+puts low
+print_every_other(low + 2, high)
+end
+
+Answer: The base case is: return if low > high. It stops the recursion when
+the lower number exceeds the upper limit.
+
+2. My kid was playing with my computer and changed my factorial function
+so that it computes factorial based on (n - 2) instead of (n - 1). Predict what
+will happen when we run factorial(10) using this function:
+def factorial(n)
+return 1 if n == 1
+return n * factorial(n - 2)
+end
+
+Answer: When we run factorial(10), the function calls itself with (n - 2),
+that would be first 8, then 6, 4, 2, 0 and then it keeps going because we
+don't reach the base case. This means the functions keeps running which results
+in a stack overflow.
+
+3. Following is a function in which we pass in two numbers called low and
+high. The function returns the sum of all the numbers from low to high. For
+example, if low is 1, and high is 10, the function will return the sum of all
+numbers from 1 to 10, which is 55. However, our code is missing the base
+case, and will run indefinitely! Fix the code by adding the correct base case:
+def sum(low, high)
+    return high + sum(low, high - 1)
+end
+
+Answer:
+
+def sum(low, high)
+    return 0 if high < low
+    return high + sum(low, high - 1)
+end
