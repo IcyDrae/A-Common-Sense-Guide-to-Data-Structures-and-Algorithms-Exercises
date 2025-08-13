@@ -1,7 +1,14 @@
-﻿using Chapter013;
+﻿using Chapter015;
 
-Solution2 Solution2 = new Solution2();
+BinarySearchTree bst = new BinarySearchTree();
 
-Console.WriteLine(
-    Solution2.findMissingNumber([9, 3, 2, 5, 6, 7, 1, 0, 4])
-);
+// Insert some values
+int[] values = { 1, 5, 9, 2, 4, 10, 6, 3, 8 };
+foreach (int v in values)
+{
+    bst.Insert(v);
+}
+
+// Find greatest value
+int max = bst.FindMax();
+Console.WriteLine("Greatest value in BST: " + max);
