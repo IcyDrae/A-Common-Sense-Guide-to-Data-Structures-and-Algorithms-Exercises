@@ -1,0 +1,31 @@
+1. Following is the “Word Builder” algorithm we encountered in Word Builder,
+on page 97. Describe its space complexity in terms of Big O:
+function wordBuilder(array) {
+let collection = [];
+for(let i = 0; i < array.length; i++) {
+for(let j = 0; j < array.length; j++) {
+if (i !== j) {
+collection.push(array[i] + array[j]);
+}
+}
+}
+return collection;
+}
+
+Answer: the space complexity of this algorithm is O(N²) because the algorithm
+builds a collection that grows quadratically with the input size. This is
+because of the nested loops.
+
+2. Following is a function that reverses an array. Describe its space complex-
+ity in terms of Big O:
+function reverse(array) {
+let newArray = [];
+for (let i = array.length - 1; i >= 0; i--) {
+newArray.push(array[i]);
+}
+return newArray;
+}
+
+Answer: the space complexity of this algorithm is O(N) because it uses
+one extra data structure to insert the new elements.
+

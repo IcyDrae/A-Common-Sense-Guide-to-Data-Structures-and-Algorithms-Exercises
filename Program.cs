@@ -1,14 +1,9 @@
-﻿using Chapter015;
+﻿using Chapter019;
 
-BinarySearchTree bst = new BinarySearchTree();
+Solution3 Solution3 = new Solution3();
 
-// Insert some values
-int[] values = { 1, 5, 9, 2, 4, 10, 6, 3, 8 };
-foreach (int v in values)
-{
-    bst.Insert(v);
-}
+int[] array = {1, 3, 5, 7, 9, 11};
 
-// Find greatest value
-int max = bst.FindMax();
-Console.WriteLine("Greatest value in BST: " + max);
+Solution3.reverse(array);
+
+Console.WriteLine(string.Join(", ", array));
